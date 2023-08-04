@@ -36,8 +36,6 @@ body {
     margin: 20px;
     /* add shadow effect. it will be thick and will fade away*/
     box-shadow: 0 80px 32px 0 rgba(31, 38, 135, 0.37);
-    /* use :before to make the shadow effect thinner and stay longer */
-        
 }
 .gallery {
     display: flex;
@@ -113,6 +111,7 @@ body {
         bottom: 10px;
         font-size: 14px;
         padding: 6px 12px;
+        
     }
     .modal {
         /* remove display: contents; */
@@ -123,7 +122,7 @@ body {
 
     .modal-content {
         /* other styles */
-        width: 100%; /* changed from relative to 90% */
+        width: 90%; /* changed from relative to 90% */
         height: 200%; /* changed from relative to auto */
         /* other styles */
     }
@@ -328,7 +327,7 @@ h1 {
 }
   
 .card {
-    background: #485c94;
+    background: #5c76be;
     width: var(--card-width);
     height: var(--card-height);
     padding: 3px;
@@ -387,7 +386,7 @@ h1 {
 .card::after {
     position: absolute;
     content: "";
-    top: calc(var(--card-height) / 6);
+    top: 0;
     left: 0;
     right: 0;
     z-index: -1;
@@ -562,4 +561,52 @@ button {
     position: relative;
     z-index: 0;
     border-radius: 10px;
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 80%;
+  }
+}
+
+/* Medium devices (tablets, less than 768px) */
+@media (max-width: 767.98px) {  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 70%;
+  }
+}
+
+/* Large devices (desktops, less than 992px) */
+@media (max-width: 991.98px) {  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 60%;
+  }
+}
+
+/* Extra large devices (large desktops, more than 992 px) */
+@media (min-width: 992px) {  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 50%;
+  }
 }
