@@ -1,3 +1,5 @@
+document.getElementById('myModal').style.display = 'none';
+
 document.addEventListener('DOMContentLoaded', (event) => {
     fetchImageLinks().then(links => {
         const linkListDiv = document.getElementById('linkList');
